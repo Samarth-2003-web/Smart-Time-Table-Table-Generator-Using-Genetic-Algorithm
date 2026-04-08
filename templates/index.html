@@ -7,8 +7,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     <style>
+        :root {
+            --theme-a: #0f766e;
+            --theme-b: #1d4ed8;
+            --theme-bg-a: #0f172a;
+            --theme-bg-b: #134e4a;
+            --theme-soft: #ecfeff;
+        }
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--theme-bg-a) 0%, var(--theme-bg-b) 100%);
             min-height: 100vh;
         }
         .main-container { padding: 2rem 0; }
@@ -18,31 +25,31 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
         .card-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--theme-a) 0%, var(--theme-b) 100%);
             color: white;
             border-radius: 15px 15px 0 0 !important;
             padding: 1.5rem;
         }
         .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--theme-a) 0%, var(--theme-b) 100%);
             border: none;
         }
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 5px 20px rgba(15, 118, 110, 0.45);
         }
         .nav-pills .nav-link.active {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--theme-a) 0%, var(--theme-b) 100%);
         }
         .nav-pills .nav-link {
-            color: #667eea;
+            color: var(--theme-b);
         }
         .subject-card, .class-card, .room-card {
             background: #f8f9fa;
             border-radius: 10px;
             padding: 15px;
             margin-bottom: 10px;
-            border-left: 4px solid #667eea;
+            border-left: 4px solid var(--theme-a);
         }
         .subject-card.lab { border-left-color: #e74c3c; }
         .remove-btn {
@@ -97,7 +104,7 @@
         .class-tab {
             cursor: pointer;
             padding: 8px 20px;
-            border: 2px solid #667eea;
+            border: 2px solid var(--theme-a);
             border-radius: 25px;
             margin: 5px;
             display: inline-block;
@@ -105,7 +112,7 @@
             background-color: #fff;
         }
         .class-tab:hover, .class-tab.active {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--theme-a) 0%, var(--theme-b) 100%);
             color: white;
         }
         .form-section { margin-bottom: 2rem; }
@@ -121,25 +128,46 @@
         .badge-lab { background-color: #e74c3c; }
         .badge-theory { background-color: #3498db; }
         .upload-zone {
-            border: 3px dashed #667eea;
+            border: 3px dashed var(--theme-a);
             border-radius: 15px;
             padding: 30px;
             text-align: center;
-            background-color: #f8f9ff;
+            background-color: var(--theme-soft);
             transition: all 0.3s;
             cursor: pointer;
         }
         .upload-zone:hover {
-            background-color: #eef2ff;
-            border-color: #764ba2;
+            background-color: #dff8f6;
+            border-color: var(--theme-b);
         }
         .upload-zone.dragover {
-            background-color: #e0e7ff;
-            border-color: #764ba2;
+            background-color: #c8f3ef;
+            border-color: var(--theme-b);
         }
-        .upload-zone i { font-size: 3rem; color: #667eea; }
+        .upload-zone i { font-size: 3rem; color: var(--theme-a); }
         .upload-success { color: #28a745; }
         .upload-error { color: #dc3545; }
+        .college-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        .college-brand img {
+            width: 54px;
+            height: 54px;
+            border-radius: 10px;
+            background: #fff;
+            padding: 4px;
+            object-fit: contain;
+        }
+        .college-brand-name {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
     </style>
 </head>
 <body>
@@ -149,6 +177,10 @@
                 <!-- Wizard Progress Bar -->
                 <div class="card mb-4">
                     <div class="card-header">
+                        <div class="college-brand">
+                            <img src="/static/image.png" alt="College Logo">
+                            <h3 class="college-brand-name">ST ALOYSIUS COLLEGE</h3>
+                        </div>
                         <h4 class="mb-3 text-center"><i class="bi bi-calendar3"></i> Timetable Generator - Step by Step</h4>
                         <div class="progress" style="height: 25px;">
                             <div class="progress-bar progress-bar-striped progress-bar-animated" id="progressBar" role="progressbar" style="width: 14.28%;" aria-valuenow="1" aria-valuemin="1" aria-valuemax="7">Step 1 of 7</div>

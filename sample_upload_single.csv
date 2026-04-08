@@ -1,0 +1,32 @@
+# Single-file upload sample for Step 2,,
+# Keep section headers exactly as shown,,
+,,
+=== CLASSES ===,,
+# Class Name,Students,Lunch Slot
+MCA II A,60,12:00 - 01:00
+MCA II B,55,12:00 - 01:00
+MCA I A,62,01:00 - 02:00
+MCA I B,60,01:00 - 02:00
+MSC I AI,35,12:00 - 01:00
+MSC II AI,35,12:00 - 01:00
+MSc II DS,35,01:00 - 02:00
+MSc I DS,35,01:00 - 02:00
+MSc I BDA,30,01:00 - 02:00
+MSC II BDA,35,12:00 - 01:00
+=== LECTURERS ===,,
+# Lecturer Name,Type,Hours/Week
+JP,theory,8
+SV,theory,7
+SB,theory,6
+BB,theory,5
+GF1,lab,4
+RK,theory,4
+AV,theory,5
+GKV,lab,3
+PLACEMENT,theory,2
+VN,theory,8
+HN,theory,8
+GF2,theory,8
+AN,theory,8
+SU,theory,10
+BH,theory,5
